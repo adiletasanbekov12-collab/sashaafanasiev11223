@@ -1,0 +1,73 @@
+* {
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #09090b;
+    color: #fafafa;
+    margin: 0;
+    padding: 0;
+}
+
+.glass {
+    background: rgba(9, 9, 11, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.04);
+    transform: translateY(-4px);
+}
+
+.tab-btn {
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.tab-btn.active {
+    background-color: #fafafa;
+    color: #09090b;
+    border-color: #fafafa;
+}
+
+.tab-btn:not(.active) {
+    background-color: transparent;
+    color: #a1a1aa;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.tab-btn:not(.active):hover {
+    color: #fafafa;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.progress-bg {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, #fafafa 0%, #a1a1aa 100%);
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
